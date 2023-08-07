@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 
+
 class Plot:
 
     def __init__(self):
@@ -123,6 +124,13 @@ class Boxplot(Plot):
 
 
 class QQplot(Plot):
+
+    def create(self, col, ax=None):
+        self.axes = sm.qqplot(col, line='s', ax=ax)
+        return self
+
+
+class Carplot(Plot):
 
     def create(self, col, ax=None):
         self.axes = sm.qqplot(col, line='s', ax=ax)
