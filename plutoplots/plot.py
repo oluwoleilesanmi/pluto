@@ -1,6 +1,8 @@
+""" plotting Module """
+
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+import statsmodels.api as sm
 
 class Plot:
 
@@ -107,9 +109,9 @@ class Kdeplot(Plot):
 
 class Histplot(Plot):
 
-    def create(self, data, x, hue, ax=None):
+    def create(self, data, x, hue, ax=None, binwidth=3, kde=False):
         self.axes = sns.histplot(data=data, x=x, hue=hue,
-                                 binwidth=3, stat="count", palette="Set2", ax=ax, zorder=2)
+                                 binwidth=binwidth, stat="count", palette="Set2", ax=ax, zorder=2, kde=kde)
         return self
 
 
@@ -117,4 +119,11 @@ class Boxplot(Plot):
 
     def create(self, data, x, y):
         self.axes = sns.boxplot(x=x, y=y, data=data, zorder=2)
+        return self
+
+
+class QQplot(Plot):
+
+    def create(self, col, ax=None):
+        self.axes = sm.qqplot(col, line='s', ax=ax)
         return self
