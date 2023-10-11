@@ -43,6 +43,12 @@ class Plot:
         self.axes.legend(bbox_to_anchor=(1.05, 1), loc="upper left", prop={"family": "Arial", "size": 12})
         return self
 
+    def bar_label(self, fmt='%.0f', pad=1, fs=10):
+        for c in self.axes.containers:
+            self.axes.bar_label(c, fmt=fmt, padding=pad, color='black',
+                                fontweight=None, fontstyle='italic', family=['monospace'], fontsize=fs)
+        return self
+
     def set_axes(self, ax):
         self.axes = ax
 
@@ -57,11 +63,11 @@ class Barplot(Plot):
                                 estimator="sum", errorbar=None, color=c, ax=ax, zorder=2)
         return self
 
-    def bar_label(self, fmt='%.0f', pad=1, fs=10):
-        for c in self.axes.containers:
-            self.axes.bar_label(c, fmt=fmt, padding=pad, color='black',
-                                fontweight=None, fontstyle='italic', family=['monospace'], fontsize=fs)
-        return self
+    # def bar_label(self, fmt='%.0f', pad=1, fs=10):
+    #     for c in self.axes.containers:
+    #         self.axes.bar_label(c, fmt=fmt, padding=pad, color='black',
+    #                             fontweight=None, fontstyle='italic', family=['monospace'], fontsize=fs)
+    #     return self
 
 
 class Lineplot(Plot):
