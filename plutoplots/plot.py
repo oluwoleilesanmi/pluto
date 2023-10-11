@@ -126,12 +126,13 @@ class Boxplot(Plot):
 class QQplot(Plot):
 
     def create(self, col, ax=None):
-        self.axes = sm.qqplot(col, line='s', ax=ax)
+        # without gca() it returns a fig has the need for gca()
+        self.axes = sm.qqplot(col, line='s', ax=ax).gca()
         return self
 
 
-class Carplot(Plot):
+class Countplot(Plot):
 
-    def create(self, col, ax=None):
-        self.axes = sm.qqplot(col, line='s', ax=ax)
+    def create(self, data, x):
+        self.axes = sns.countplot(data, x=x, zorder=2)
         return self
