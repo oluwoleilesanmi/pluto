@@ -7,11 +7,12 @@
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+
+<div align="center">
 If you like the repo, please feel free to give it a :star:  (top right). Cheers!
 
 For more information about the author, see below links to get in touch:
-
-<div align="center">
 
 [![Email Badge](https://img.shields.io/badge/-Gmail-D14836?style=flat&logo=gmail&logoColor=white)](mailto:oluwoleilesanmi@gmail.com)
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/oluwoleilesanmi)
