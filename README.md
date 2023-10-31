@@ -1,10 +1,10 @@
-<div style="text-align:center;">
+<div align="center">
     <h1>
-        <a href="">Pluto</a>
+        <a>Pluto</a>
     </h1>
     Visualization library for <i>easier plotting</i> built on top of Seaborn and Matplotlib.
 </div>
-<div style="padding-top:0.5em; padding-bottom:0; display:flex; justify-content: center">
+<div padding-top=0.5em, padding-bottom=0, align="center">
 
 [![Email Badge](https://img.shields.io/badge/-Gmail-D14836?style=flat&logo=gmail&logoColor=white)](mailto:oluwoleilesanmi@gmail.com)
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/oluwoleilesanmi)
