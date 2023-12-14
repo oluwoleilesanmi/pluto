@@ -139,6 +139,6 @@ class QQplot(Plot):
 
 class Countplot(Plot):
 
-    def create(self, data, x=None, y=None, c="#69b3a2", hue= None, order=None, width=0.8, ax=None):
-        self.axes = sns.countplot(data, x=x, y=y, width=width, color=c, hue=hue, order=order, zorder=2, ax=ax)
+    def create(self, data, x=None, y=None, c="#69b3a2", hue= None, order=None, palette="RdBu", width=0.8, ax=None):
+        self.axes = sns.countplot(data, x=x, y=y, width=width, color=c, hue=hue, palette=palette, order=order, zorder=2, ax=ax)
         return self
